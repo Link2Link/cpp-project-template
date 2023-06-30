@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.16)
 
 project(cpp-project-template)
 
@@ -13,5 +13,11 @@ include_directories(${PROJECT_SOURCE_DIR}/include/CHEN)
 add_executable(CHEN ${SRC})
 install(TARGETS CHEN DESTINATION ${PROJECT_SOURCE_DIR}/bin) #安装到bin目录
 
-
-add_subdirectory(test)
+option(TEST_OPTION "Test Option" ON)
+if(${TEST_OPTION})
+    add_definitions(-DTEST_OPTION)
+    message(STATUS "Test Option ON")
+    add_subdirectory(test)
+else()
+    message(STATUS "Test Option OFF")
+endif()
