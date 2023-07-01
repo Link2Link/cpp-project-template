@@ -35,3 +35,4 @@
 .idea/*.xml
 cmake-build-debug
 bin/*
+build
