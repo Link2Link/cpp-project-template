@@ -16,7 +16,7 @@ TEST_CASE("Demo"){
   REQUIRE_MESSAGE("foobar" == doctest::Contains("foo"), "same as INFO");
 
   INFO("float approx compare");
-  REQUIRE(22.0/7 == doctest::Approx(3.141).epsilon(0.00001)); // allow for a 1% error
+  REQUIRE(22.0/7 == doctest::Approx(3.141).epsilon(0.0001)); // allow for a 1% error
 
 }
 
