@@ -27,7 +27,8 @@ SET(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/bin)
 FILE(GLOB SRC "${PROJECT_SOURCE_DIR}/src/*.cpp")
 include_directories(${PROJECT_SOURCE_DIR}/include/CHEN)
 
-add_executable(CHEN ${SRC})
+#add_executable(CHEN ${SRC})
+add_library(CHEN STATIC ${SRC})
 install(TARGETS CHEN DESTINATION ${PROJECT_SOURCE_DIR}/bin) #安装到bin目录
 
 option(ENABLE_UNIT_TESTS "Enable unit tests" ON)
