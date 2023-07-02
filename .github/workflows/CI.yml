@@ -26,13 +26,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: build
-        run: mkdir build && cd build && cmake .. && make && make install
+      - name: Configure CMake
+        run: cmake -B ${{github.workspace}}/build
 
-      - name: Run test
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build
+
+      - name: Test
+        working-directory: ${{github.workspace}}/build/test
         run: |
-          cd build 
-          cd test
           ctest
       
 
