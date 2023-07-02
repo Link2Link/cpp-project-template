@@ -31,7 +31,8 @@ jobs:
 
       - name: Run test
         run: |
-          bin/test/DemoDoctest
-          bin/test//DemoBenchtest
+          cd build 
+          cd test
+          ctest
       
 
