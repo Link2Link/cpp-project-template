@@ -12,3 +12,14 @@ DivisionResult Division::divide() {
 }
 
 
+double calc(int type, double a, double b)
+{
+    if (type == 1)
+    {
+        return a*b;
+    }
+    else
+    {
+        return a+b;
+    }
+}

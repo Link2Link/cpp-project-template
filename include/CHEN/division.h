@@ -12,17 +12,7 @@ static const char *const DIVISION_BY_ZERO_MESSAGE = "Division by zero is illegal
 
 using namespace std;
 
-double calc(int type, double a, double b)
-{
-    if (type == 1)
-    {
-        return a*b;
-    }
-    else
-    {
-        return a+b;
-    }
-}
+double calc(int type, double a, double b);
 
 
 class DivisionByZero : public exception {
