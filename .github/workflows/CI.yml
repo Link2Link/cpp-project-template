@@ -25,13 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
       - name: build
-        run: mkdir build && cd build && cmake .. && make
+        run: mkdir build && cd build && cmake .. && make && make install
 
-      # Runs a set of commands using the runners shell
+      - name : Debug CI
+        run: |
+          pwd
+
       - name: Run test
         run: |
-          echo pwd
-#          test/DemoDoctest
-#          test/DemoBenchtest
+          bin/test/DemoDoctest
+          bin/test//DemoBenchtest
+      
+
