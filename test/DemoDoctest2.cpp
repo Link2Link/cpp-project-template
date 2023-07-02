@@ -22,4 +22,11 @@ TEST_CASE("Division test")
     b = 2;
     double c = calc(1, a, b);
     CHECK(c == 2);
+
+    a = 1;
+    b = 2;
+    c = calc(2, a, b);
+    CHECK(c == 3);
+
+
 }
