@@ -38,6 +38,6 @@ jobs:
       - name: Test
         working-directory: ${{github.workspace}}/build/test
         run: |
-          ctest
+          ctest -C Debug
       
 
