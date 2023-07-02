@@ -36,8 +36,8 @@ jobs:
         run: cmake --build ${{github.workspace}}/build
 
       - name: Test
-        working-directory: ${{github.workspace}}/build/test
+        working-directory: ${{github.workspace}}/build
         run: |
-          ctest -C Debug
+          ctest -C Debug --test-dir test
       
 

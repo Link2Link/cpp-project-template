@@ -34,7 +34,7 @@ option(ENABLE_UNIT_TESTS "Enable unit tests" ON)
 option(ENABLE_LCOV "Enable code coverage tests" OFF)
 message(STATUS "---------------------------")
 message(STATUS "Current : ${PROJECT_NAME}")
-message(STATUS "Enable gtesting: ${ENABLE_UNIT_TESTS}")
+message(STATUS "Enable testing: ${ENABLE_UNIT_TESTS}")
 message(STATUS "Enable coverage: ${ENABLE_LCOV}")
 
 if(${ENABLE_UNIT_TESTS})
