@@ -26,6 +26,7 @@ SET(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/bin)
 
 FILE(GLOB SRC "${PROJECT_SOURCE_DIR}/src/*.cpp")
 include_directories(${PROJECT_SOURCE_DIR}/include/CHEN)
+include_directories(${PROJECT_SOURCE_DIR}/thirdparty)
 
 #add_executable(CHEN ${SRC})
 add_library(CHEN STATIC ${SRC})
